@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+
+    username: root
+    password: sbq254172
+    url: jdbc:mysql://localhost:3306/mail?serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  profiles:
+    active:
+      - cookie
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+    lazy-loading-enabled: true
+    aggressive-lazy-loading: true
+  mapper-locations:
+    - classpath:mapper/*Mapper.xml
+
+
+
